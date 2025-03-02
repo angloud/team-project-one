@@ -1,0 +1,74 @@
+{% extends "base.html" %} {% block content %}
+<br />
+<div class="jumbotron">
+  <div class="text-center">
+    <img src="/static/img/pylogo.png" class="img-fluid mx-auto d-block" style="max-width: 400px; height: auto;"/>
+</div>
+  <div class="lead">
+   
+  </div>
+  <br />
+
+  <div class="dimmed-box">
+    <p>
+      This project is a web application built using Flask, designed to provide real-time system and process 
+      monitoring through RESTful APIs. The application leverages the <code>psutil</code> library to gather 
+      system metrics and process information, which can be accessed via API endpoints.
+  </p>
+
+  <h5>Key Features</h5>
+
+  <ol>
+      <li>
+          <strong>Real-Time Process Information:</strong>
+          <ul>
+              <li><strong>Description:</strong> The application provides an API endpoint to retrieve real-time 
+                  information about running processes on the system.</li>
+              <li><strong>Endpoint:</strong> <code>/api/process</code></li>
+              <li><strong>Example:</strong> A client can send a GET request to <code>/api/process</code> to receive 
+                  a JSON response containing details such as:
+                  <ul>
+                      <li>Process ID</li>
+                      <li>Name</li>
+                      <li>Memory usage</li>
+                      <li>Number of threads</li>
+                      <li>CPU times for each running process</li>
+                  </ul>
+              </li>
+          </ul>
+      </li>
+
+      <li>
+          <strong>Real-Time System Metrics:</strong>
+          <ul>
+              <li><strong>Description:</strong> The application provides an API endpoint to retrieve real-time 
+                  system metrics, including CPU usage, memory usage, disk usage, network I/O, and disk I/O.</li>
+              <li><strong>Endpoint:</strong> <code>/api/monitor</code></li>
+              <li><strong>Example:</strong> A client can send a GET request to <code>/api/monitor</code> to receive 
+                  a JSON response containing the following system metrics:
+                  <ul>
+                      <li>Current CPU usage percentage</li>
+                      <li>Memory usage percentage</li>
+                      <li>Disk usage percentage</li>
+                      <li>Network bytes sent/received</li>
+                      <li>Disk bytes read/written</li>
+                  </ul>
+              </li>
+          </ul>
+      </li>
+  </ol>
+
+  <hr />
+    <hr />
+    <p>
+      <!-- <img src="static/img/" class="icon" /> -->
+      <!-- <a class="btn btn-info btn" href="">
+        Gitlab CI/CD Pipeline -->
+      </a>
+    </p>
+
+    <br />
+
+  </div>
+</div>
+{% endblock %}
